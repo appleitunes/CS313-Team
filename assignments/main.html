@@ -3,30 +3,31 @@
     <head>
         <title>Team 1</title>
         <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css""></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="main.js"></script>
     </head>
     <body>
-        <div class="row">
-            <div id="first_div" class="col">
-                Div 1
-                <input type="text" id="color_input">
-                <button id="color_button">Change Color</button>
+        <div class="container">
+            <div class="row">
+                <div id="first_div" class="col-md-2 col-md-offset-5">
+                    Div 1
+                    <input type="text" id="color_input">
+                    <button id="color_button">Change Color</button>
+                </div>
+
+                <div class="col-md-2 col-md-offset-5">Div 2</div>
+
+                <div id="third_div" class="col-md-2 col-md-offset-5">
+                    Div 3
+                    <button id="visibility_button">Toggle Visibility</button>
+                </div>
+
+                <div class="col-md-2 col-md-offset-5">
+                    <button id="click_button">Click Me</button>
+                </div>
             </div>
-
-            <br>
-
-            <div class="col">Div 2</div>
-
-            <br>
-
-            <div id="third_div" class="col">Div 3</div>
-            <button id="visibility_button">Toggle Visibility</button>
         </div>
-
-        <br>
-
-        <button id="click_button">Click Me</button>
     </body>
 </html>

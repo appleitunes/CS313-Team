@@ -19,6 +19,7 @@ $(document).ready(function() {
 
     $("#color_button").click(() => {
         $("#first_div").css({ color: $("#color_input").val() });
+        $("#color_input").val("");
     });
 
     let $visible = true;
