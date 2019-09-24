@@ -1,11 +1,10 @@
 // window.onload = () => {
-//     let divs = document.getElementsByClassName("display");
-//     let button1 = document.getElementById("the_button");
+//     let button1 = document.getElementById("click_button");
 //     button1.onclick = () => {
 //         alert("Clicked!");
 //     };
 
-//     let div1 = document.getElementById("div1");
+//     let div1 = document.getElementById("first_div");
 //     let button2 = document.getElementById("color_button");
 //     button2.onclick = () => {
 //         let color = document.getElementById("color_input").value;
@@ -14,13 +13,21 @@
 // };
 
 $(document).ready(function() {
-    $("#the_button").click(() => {
+    $("#click_button").click(() => {
         alert("Clicked!");
     });
 
     $("#color_button").click(() => {
-        $("#div1").css({ color: $("#color_input").val() });
+        $("#first_div").css({ color: $("#color_input").val() });
     });
 
-    $("#visibility")
+    let $visible = true;
+
+    $("#visibility_button").click(() => {
+        $visible = !$visible;
+
+        let $style = $visible ? "visible" : "hidden";
+
+        $("#third_div").css({ visibility: $style });
+    });
 });

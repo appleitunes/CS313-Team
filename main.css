@@ -1,6 +1,7 @@
-.display {
-    border: solid;
-    display: inline-block;
+div {
+    background-color: gray;
+    cursor: auto;
+    width: 100px;
 }
 
 div:hover {
