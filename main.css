@@ -1,9 +1,0 @@
-div {
-    background-color: gray;
-    cursor: auto;
-    width: 100px;
-}
-
-div:hover {
-    font-weight: bold;
-}
