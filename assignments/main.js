@@ -27,8 +27,8 @@ $(document).ready(function() {
     $("#visibility_button").click(() => {
         $visible = !$visible;
 
-        let $style = $visible ? "visible" : "hidden";
+        let $style = $visible ? "1" : "0";
 
-        $("#third_div").css({ visibility: $style });
+        $("#third_div").css({ opacity: $style });
     });
 });
