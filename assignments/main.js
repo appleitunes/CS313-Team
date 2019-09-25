@@ -12,13 +12,15 @@
 //     };
 // };
 
-$(document).ready(function() {
+$(document).ready(function () {
     $("#click_button").click(() => {
         alert("Clicked!");
     });
 
     $("#color_button").click(() => {
-        $("#first_div").css({ color: $("#color_input").val() });
+        $("#first_div").css({
+            backgroundColor: $("#color_input").val()
+        });
         $("#color_input").val("");
     });
 
@@ -27,8 +29,10 @@ $(document).ready(function() {
     $("#visibility_button").click(() => {
         $visible = !$visible;
 
-        let $style = $visible ? "visible" : "hidden";
+        let $style = $visible ? "1" : "0";
 
-        $("#third_div").css({ visibility: $style });
+        $("#third_div").css({
+            opacity: $style
+        });
     });
 });
