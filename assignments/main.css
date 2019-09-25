@@ -14,3 +14,7 @@
     border: solid;
     padding: 15px;
 }
+
+#third_div {
+    transition: all 1s;   
+}
