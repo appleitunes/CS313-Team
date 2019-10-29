@@ -1,4 +1,4 @@
-<?php
+<?php 
     require 'dbConnect.php';
     session.start();
     
@@ -6,23 +6,21 @@
         $username = $_GET["username"];
         $password = password_hash($_GET["password"], PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO Account (username, hashed_password) VALUES ('$username', $password);";
+        $db->query("SELECT comment FROM Comment c WHERE c.story_id = '$id';") as $row;
 
         if ($db->query($sql) == TRUE) {
             // User Created
-            $_SESSION["logged_in"] = 1;
-            $_SESSION["username"] = $username;
-            
             header("Location: welcome.php"); 
+            exit();
         } else {
             // User Not Created
             header("Location: signup.php"); 
+            exit();
         }
     }
     catch (Exception $e) {
         // Error
         header("Location: signup.php"); 
+        exit();
     }
-
-    exit();
 ?>

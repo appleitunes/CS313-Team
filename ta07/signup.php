@@ -1,5 +1,6 @@
 <?php
-    ?>
+    require 'dbConnect.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,16 +12,17 @@
     </head>
     
     <body>
-        <form action="SOMETHING.PHP" method="get">
-        <div class="form-group">
-            <label for="usernameLabel">Username</label>
-            <input type="text_ class="form-control" id="username" name="username" placeholder="Enter username">
+        <h1>Sign Up</h1>
+        <form action="create_user.php" method="get">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
             </div>
-                 class="form-group">
-                <label for="exampleInputPassword1">Password</label>
+            <div class="form-group">
+                <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             </div>
-                ton type="submit" class="btn btn-primary">Submit</button>
-                rm>
-            dy>
-            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </body>
+</html>
